@@ -11,10 +11,17 @@ hold_duration = col2.slider("Nefesi tutma süresi (saniye)", 0, 5, 0)
 circle = st.empty()
 label = st.empty()
 
-steps = list(range(50, 200, 10))
-delay = breath_duration / len(steps)
+st.markdown("---")  # layout
 
-st.markdown("---")  # layout stabilizer
+# Animation frames
+frame_rate = 60
+
+# Total frames for the animation
+total_frames = int(breath_duration * frame_rate)
+
+# Generate smooth size steps
+steps = [50 + (150 * i / total_frames) for i in range(total_frames)]  # from 50 to 200 px
+delay = 1 / frame_rate  # Delay per frame
 
 while True:
     # Nefes Al
