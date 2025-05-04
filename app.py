@@ -6,7 +6,7 @@ st.title("🧘‍♀️ Nefes Egzersizi")
 
 col1, col2 = st.columns(2)
 breath_duration = col1.slider("Nefes alma/verme süresi (saniye)", 1, 10, 1)
-hold_duration = col2.slider("Nefesi tutma süresi (saniye)", 0, 5, 0)
+hold_duration = col2.slider("Nefesi tutma süresi (saniye)", 1, 10, 1)
 
 circle = st.empty()
 label = st.empty()
